@@ -1,0 +1,42 @@
+html{
+    background-color: rgb(98, 213, 179);
+    height: 1000px;
+}
+h1{
+    font-size: 60px;
+    margin: 150px;
+    margin-left: 550px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#div1{
+    margin-left: 600px;    
+}
+#singer{
+    margin-left: 25px;
+}
+#name{
+    margin-left: 25px;
+}
+#image{
+    height: 250px;
+    width: 250px;
+}
+button{
+    background-color: rgb(98, 213, 179);
+    border: 0px;
+}
+#div2{
+    margin-left: 650px;
+}
+#div3{
+    margin-left: 630px;
+    display: flex;
+}
+#current-time{
+    padding: 10px;
+}
+#duration-time{
+    padding: 10px;
+}
