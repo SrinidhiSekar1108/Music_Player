@@ -7,45 +7,49 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Music Player</h1>
-        <div id="div1">
-            <img id="image" src="rewrite the stars.jpg">
-            <h2 id="name">Rewrite The Stars</h2>
-            <h3 id="singer">James Arthur,Anne-Marie</h3>
+        <div id="main-div">
+            <h1>Music Player</h1>
+            <div id="div1">
+                <img id="image" src="rewrite the stars.jpg">
+                <h2 id="name">Rewrite The Stars</h2>
+                <h3 id="singer">James Arthur,Anne-Marie</h3>
+            </div>
+            <video id="bgvdo" class="bg-vdo" autoplay loop muted poster="rewrite the stars.jpg">
+                <source src="Rewrite The Stars  Lyric Video.mp4" type="video/mp4">
+            </video>
+            <div id="div2">
+                <button id="backward">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-rewind-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM7.729 5.055A.5.5 0 0 1 8 5.5v1.886l3.21-2.293A.5.5 0 0 1 12 5.5v5a.5.5 0 0 1-.79.407L8 8.614V10.5a.5.5 0 0 1-.79.407l-3.5-2.5a.5.5 0 0 1 0-.814l3.5-2.5a.5.5 0 0 1 .519-.038Z"/>
+                    </svg>
+                </button>
+                <button id="play">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                    </svg>
+                </button>
+                <button id="forward">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-fast-forward-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM4.79 5.093 8 7.386V5.5a.5.5 0 0 1 .79-.407l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 8 10.5V8.614l-3.21 2.293A.5.5 0 0 1 4 10.5v-5a.5.5 0 0 1 .79-.407Z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <br />
+
+            <div id="div3">
+                <div id="current-time">00:00</div>
+                <input type="range" id="range" min="0.0" max="100" value="0">
+                <div id="duration-time">00:00</div>
+            </div>
+
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+            <script src="script.js" charset="utf-8" type="text/javascript"></script>
         </div>
-
-        <div id="div2">
-            <button id="backward">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-rewind-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM7.729 5.055A.5.5 0 0 1 8 5.5v1.886l3.21-2.293A.5.5 0 0 1 12 5.5v5a.5.5 0 0 1-.79.407L8 8.614V10.5a.5.5 0 0 1-.79.407l-3.5-2.5a.5.5 0 0 1 0-.814l3.5-2.5a.5.5 0 0 1 .519-.038Z"/>
-                  </svg>
-            </button>
-            <button id="play">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-                  </svg>
-            </button>
-            <button id="forward">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-fast-forward-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM4.79 5.093 8 7.386V5.5a.5.5 0 0 1 .79-.407l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 8 10.5V8.614l-3.21 2.293A.5.5 0 0 1 4 10.5v-5a.5.5 0 0 1 .79-.407Z"/>
-                  </svg>
-            </button>
-        </div>
-
-        <br />
-
-        <div id="div3">
-            <div id="current-time">00:00</div>
-            <input type="range" id="range" min="0.0" max="100" value="0">
-            <div id="duration-time">00:00</div>
-        </div>
-
-
-
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-        <script src="script.js" charset="utf-8" type="text/javascript"></script>
     </body>
 </html>
