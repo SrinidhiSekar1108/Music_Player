@@ -3,6 +3,7 @@ html{
     height: 1000px;
 }
 h1{
+    color: aquamarine;
     font-size: 60px;
     margin: 150px;
     margin-left: 550px;
@@ -14,9 +15,11 @@ h1{
     margin-left: 600px;    
 }
 #singer{
+    color: aquamarine;
     margin-left: 25px;
 }
 #name{
+    color: aquamarine;
     margin-left: 25px;
 }
 #image{
@@ -25,6 +28,7 @@ h1{
 }
 button{
     background-color: rgb(98, 213, 179);
+    border-radius: 50%;
     border: 0px;
 }
 #div2{
@@ -35,10 +39,24 @@ button{
     display: flex;
 }
 #current-time{
+    color: aquamarine;
     padding: 10px;
 }
 #duration-time{
+    color: aquamarine;
     padding: 10px;
+}
+.bg-vdo{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: -0.5px;
 }
 @media(max-width:600px){
     h1{
