@@ -40,3 +40,37 @@ button{
 #duration-time{
     padding: 10px;
 }
+@media(max-width:600px){
+    h1{
+        font-size: 60px;
+        margin: 50px;
+        margin-left: 80px;
+        margin-right: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #div1{
+        margin-left: 60px;    
+    }
+    #singer{
+        margin-left: 25px;
+    }
+    #name{
+        margin-left: 25px;
+    }
+    #image{
+        height: 250px;
+        width: 250px;
+    }
+    button{
+        background-color: rgb(98, 213, 179);
+        border: 0px;
+    }
+    #div2{
+        margin-left: 60px;
+    }
+    #div3{
+        margin-left: 60px;
+        display: flex;
+    }
+}
