@@ -2,7 +2,7 @@ var songNumber=0;
 var clickCount=true;
 var audio;
 var music=[
-    {title:"Rewrite The Stars",artist:"James Arthur,Anne-Marie",url:"songs/Anne-Marie_James_Arthur_-_Rewrite_The_Stars.mp3",pic:"images/rewrite the stars.jpg"},
+    {title:"Rewrite The Stars",artist:"James Arthur,Anne-Marie",url:"Anne-Marie_James_Arthur_-_Rewrite_The_Stars.mp3",pic:"rewrite the stars.jpg"},
     {title:"Stay",artist:"The Kid LAROI & Justin Bieber",url:"songs/Stay(PaglaSongs).mp3",pic:"images/stay.jpg"},
     {title:"Blinding Lights",artist:"The Weeknd",url:"songs/The_Weeknd_-_Blinding_Lights.mp3",pic:"images/blinding lights.jpg"},
     {title:"Heat Waves",artist:"Glass Animals",url:"songs/Glass_Animals_-_Heat_Waves.mp3",pic:"images/heat waves.jpg"},
