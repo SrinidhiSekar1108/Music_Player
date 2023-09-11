@@ -72,24 +72,27 @@ function playSong()
     $("#image").attr("src",music[songNumber].pic);
     $("#name").text(music[songNumber].title);
     $("#singer").text(music[songNumber].artist);
-    // var audio1=new Audio();
-    // audio1.addEventListener("timeupdate",()=>{
-    //     var ct=Math.floor(audio1.currentTime);
-    //     var cm=Math.floor(ct/60);
-    //     var cs=ct%60;
+    audio.addEventListener("timeupdate",()=>{
+        var ct=Math.floor(audio.currentTime);
+        var cm=Math.floor(ct/60);
+        var cs=ct%60;
 
-    //     var dt=Math.floor(audio1.duration);
-    //     var dm=Math.floor(dt/60);
-    //     var ds=dt%60;
+        var dt=Math.floor(audio.duration);
+        var dm=Math.floor(dt/60);
+        var ds=dt%60;
 
-    //     $("#current-time").text=cm+":"+cs;
-    //     $("#duration-time").text=dm+":"+ds; 
-    //     $("#range").value=(audio1.currentTime/audio1.duration)*100;      
+        var formattedCurrentTime = cm.toString().padStart(2, '0') + ":" + cs.toString().padStart(2, '0');
+        var formattedDurationTime = dm.toString().padStart(2, '0') + ":" + ds.toString().padStart(2, '0');
+
+        // Update the elements with the new values
+        $("#current-time").text(formattedCurrentTime);
+        $("#duration-time").text(formattedDurationTime);
+
+        // Update the range input value to reflect the progress
+        $("#range").val((audio.currentTime / audio.duration) * 100);      
         
-    // });
-    $("#current-time").text(audio.currentTime);
-    $("#duration-time").text(audio.duration);
-    $("#range").value(audio.currentTime);
+    });
+    
 }
 
 function pauseSong()
@@ -100,4 +103,3 @@ function pauseSong()
     }
     clickCount=true;
 }
-
