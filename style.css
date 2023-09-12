@@ -1,9 +1,9 @@
 html{
-    background-color: rgb(98, 213, 179);
+    background-color:  rgb(122, 127, 220);
     height: 1000px;
 }
 h1{
-    color: aquamarine;
+    color:  rgb(122, 127, 220);
     font-size: 60px;
     margin: 150px;
     margin-left: 550px;
@@ -15,19 +15,20 @@ h1{
     margin-left: 600px;    
 }
 #singer{
-    color: aquamarine;
+    color: rgb(122, 127, 220);
     margin-left: 25px;
 }
 #name{
-    color: aquamarine;
+    color:  rgb(122, 127, 220);
     margin-left: 25px;
 }
 #image{
     height: 250px;
     width: 250px;
+    opacity: 0.5;
 }
 button{
-    background-color: rgb(98, 213, 179);
+    background-color: rgb(122, 127, 220);
     border-radius: 50%;
     border: 0px;
 }
@@ -39,11 +40,11 @@ button{
     display: flex;
 }
 #current-time{
-    color: aquamarine;
+    color: rgb(122, 127, 220);
     padding: 10px;
 }
 #duration-time{
-    color: aquamarine;
+    color:  rgb(122, 127, 220);
     padding: 10px;
 }
 .bg-vdo{
@@ -56,16 +57,22 @@ button{
     top: 0;
     bottom: 0;
     z-index: -1;
-    opacity: -0.5px;
 }
 @media(max-width:600px){
+    html{
+        height: 800px;
+    }
     h1{
         font-size: 60px;
         margin: 50px;
         margin-left: 80px;
         margin-right: 50px;
-        margin-top: 50px;
+        margin-top: 0px;
+        padding-top: 0px;
         margin-bottom: 50px;
+    }
+    #main-div{
+        height: 500px;
     }
     #div1{
         margin-left: 60px;    
