@@ -11,9 +11,9 @@ var music=[
     {title:"Perfect",artist:"Ed Sheeran",url:"Ed_Sheeran_-_Perfect.mp3",pic:"perfect.jpg",vdo:"Ed Sheeran - Perfect (Official Music Video).mp4"},
     {title:"Senorita",artist:"Shawn Mendes,Camila Cabello",url:"Shawn_Mendes_Camila_Cabello_-_Se_orita.mp3",pic:"senorita.jpg",vdo:"Shawn Mendes, Camila Cabello - Señorita.mp4"},
     {title:"Love Me Like You Do",artist:"Ellie Goulding",url:"Love-Me-Like-You-Do(PaglaSongs).mp3",pic:"love me like you do.jpg",vdo:"Ellie Goulding - Love Me Like You Do (Official Video).mp4"},
-    {title:"Make You Mine",artist:"Public",url:"PUBLIC - Make You Mine Put your hand in mine .mp3",pic:"blank space.jpg",vdo:"PUBLIC - Make You Mine (Put Your Hand in Mine) [Official Video].mp4"},
+    {title:"Make You Mine",artist:"Public",url:"PUBLIC - Make You Mine Put your hand in mine .mp3",pic:"make you mine.jpeg",vdo:"PUBLIC - Make You Mine (Put Your Hand in Mine) [Official Video].mp4"},
     {title:"Closer",artist:"The Chainsmokers ft. Halsey",url:"The_Chainsmokers_ft_Halsey_-_Closer.mp3",pic:"closer.jpg",vdo:"The Chainsmokers - Closer (Official Video) ft. Halsey.mp4"},
-    {title:"Enchanted",artist:"Taylor Swift",url:"Enchanted.mp3",pic:"bad blood.jpg",vdo:"Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp4"},
+    {title:"Enchanted",artist:"Taylor Swift",url:"Enchanted.mp3",pic:"blank space.jpg",vdo:"Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp4"},
     {title:"Faded",artist:"Alan Walker",url:"Alan_Walker_-_Faded.mp3",pic:"faded.jpg",vdo:"Alan Walker - Faded.mp4"},
     {title:"What Makes You Beautiful",artist:"One Direction",url:"Harry_Styles_-_What_Makes_You_Beautiful_(Jesusful.com).mp3",pic:"what makes you beautiful.jpg",vdo:"One Direction - What Makes You Beautiful (Official Video).mp4"},
     {title:"We Don't Talk Anymore",artist:"Charlie Puth ft. Selena Gomez",url:"We-Don't-Talk-Anymore---Charlie-Puth(musicdownload.cc).mp3",pic:"we dont talk anymore.jpg",vdo:"Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) [Official Video].mp4"},
@@ -69,10 +69,12 @@ function playSong()
     }
     audio=new Audio(music[songNumber].url);
     audio.play();
+    
     $("#image").attr("src",music[songNumber].pic);
     $("#name").text(music[songNumber].title);
     $("#singer").text(music[songNumber].artist);
     $("#bgvdo").attr("src",music[songNumber].vdo);
+    
     audio.addEventListener("timeupdate",()=>{
         var ct=Math.floor(audio.currentTime);
         var cm=Math.floor(ct/60);
@@ -92,7 +94,13 @@ function playSong()
         // Update the range input value to reflect the progress
         $("#range").val((audio.currentTime / audio.duration) * 100);      
         
+        if(audio.currentTime==audio.duration)
+        {
+            songNumber++;
+            playSong();
+        }
     });
+
     
 }
 
